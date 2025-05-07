@@ -1,0 +1,1137 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu May  1 10:34:42 2025
+# Process ID: 953806
+# Current directory: /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1
+# Command line: vivado -log top_dot_product_engine.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_dot_product_engine.tcl
+# Log file: /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1/top_dot_product_engine.vds
+# Journal file: /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1/vivado.jou
+# Running On: hp, OS: Linux, CPU Frequency: 900.000 MHz, CPU Physical cores: 4, Host memory: 16650 MB
+#-----------------------------------------------------------
+source top_dot_product_engine.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/utils_1/imports/synth_1/dot_product_engine.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/utils_1/imports/synth_1/dot_product_engine.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_dot_product_engine -part xc7k325tffg900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 953925
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2756.074 ; gain = 0.000 ; free physical = 712 ; free virtual = 20780
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_dot_product_engine' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/top_dot_product_engine.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'block_ram' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv:1]
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'block_ram' (1#1) [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sipo' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/sipo.sv:1]
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+	Parameter M bound to: 32'sb00000000000000000000000001000000 
+INFO: [Synth 8-6155] done synthesizing module 'sipo' (2#1) [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/sipo.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'dot_product_engine' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:5]
+	Parameter N bound to: 32'sb00000000000000000000000001000000 
+INFO: [Synth 8-6157] synthesizing module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1/.Xil/Vivado-953806-hp/realtime/floating_point_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_0' (3#1) [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1/.Xil/Vivado-953806-hp/realtime/floating_point_0_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+WARNING: [Synth 8-689] width (32) of port connection 's_axis_a_tdata' does not match port width (8) of module 'floating_point_0' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
+INFO: [Synth 8-6157] synthesizing module 'floating_point_1' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1/.Xil/Vivado-953806-hp/realtime/floating_point_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_1' (4#1) [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1/.Xil/Vivado-953806-hp/realtime/floating_point_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'floating_point_2' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1/.Xil/Vivado-953806-hp/realtime/floating_point_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_2' (5#1) [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1/.Xil/Vivado-953806-hp/realtime/floating_point_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dot_product_engine' (6#1) [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'top_dot_product_engine' (7#1) [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/top_dot_product_engine.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2756.074 ; gain = 0.000 ; free physical = 326 ; free virtual = 20394
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2756.074 ; gain = 0.000 ; free physical = 995 ; free virtual = 21063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2756.074 ; gain = 0.000 ; free physical = 1018 ; free virtual = 21086
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2756.074 ; gain = 0.000 ; free physical = 1203 ; free virtual = 21271
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[0].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[0].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[1].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[1].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[2].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[2].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[3].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[3].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[4].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[4].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[5].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[5].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[6].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[6].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[7].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[7].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[8].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[8].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[9].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[9].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[10].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[10].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[11].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[11].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[12].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[12].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[13].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[13].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[14].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[14].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[15].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[15].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[16].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[16].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[17].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[17].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[18].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[18].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[19].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[19].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[20].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[20].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[21].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[21].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[22].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[22].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[23].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[23].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[24].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[24].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[25].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[25].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[26].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[26].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[27].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[27].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[28].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[28].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[29].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[29].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[30].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[30].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[31].add_lvl1'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL1[31].add_lvl1'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[0].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[0].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[1].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[1].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[2].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[2].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[3].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[3].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[4].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[4].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[5].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[5].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[6].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[6].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[7].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[7].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[8].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[8].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[9].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[9].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[10].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[10].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[11].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[11].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[12].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[12].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[13].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[13].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[14].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[14].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[15].add_lvl2'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL2[15].add_lvl2'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[0].add_lvl3'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[0].add_lvl3'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[1].add_lvl3'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[1].add_lvl3'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[2].add_lvl3'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[2].add_lvl3'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[3].add_lvl3'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[3].add_lvl3'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[4].add_lvl3'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[4].add_lvl3'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[5].add_lvl3'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[5].add_lvl3'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[6].add_lvl3'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[6].add_lvl3'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[7].add_lvl3'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL3[7].add_lvl3'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL4[0].add_lvl4'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL4[0].add_lvl4'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL4[1].add_lvl4'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL4[1].add_lvl4'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL4[2].add_lvl4'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL4[2].add_lvl4'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL4[3].add_lvl4'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL4[3].add_lvl4'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL5[0].add_lvl5'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL5[0].add_lvl5'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL5[1].add_lvl5'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/GEN_ADD_LVL5[1].add_lvl5'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/add_lvl6'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2/floating_point_2_in_context.xdc] for cell 'dpe_inst/add_lvl6'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[0].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[0].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[1].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[1].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[2].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[2].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[3].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[3].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[4].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[4].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[5].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[5].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[6].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[6].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[7].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[7].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[8].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[8].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[9].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[9].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[10].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[10].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[11].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[11].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[12].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[12].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[13].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[13].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[14].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[14].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[15].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[15].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[16].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[16].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[17].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[17].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[18].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[18].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[19].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[19].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[20].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[20].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[21].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[21].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[22].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[22].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[23].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[23].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[24].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[24].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[25].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[25].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[26].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[26].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[27].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[27].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[28].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[28].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[29].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[29].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[30].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[30].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[31].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[31].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[32].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[32].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[33].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[33].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[34].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[34].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[35].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[35].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[36].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[36].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[37].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[37].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[38].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[38].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[39].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[39].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[40].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[40].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[41].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[41].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[42].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[42].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[43].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[43].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[44].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[44].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[45].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[45].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[46].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[46].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[47].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[47].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[48].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[48].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[49].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[49].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[50].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[50].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[51].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[51].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[52].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[52].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[53].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[53].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[54].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[54].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[55].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[55].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[56].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[56].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[57].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[57].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[58].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[58].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[59].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[59].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[60].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[60].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[61].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[61].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[62].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[62].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[63].fp_mult'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1/floating_point_1_in_context.xdc] for cell 'dpe_inst/GEN_MUL[63].fp_mult'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[0].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[0].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[1].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[1].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[2].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[2].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[3].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[3].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[4].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[4].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[5].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[5].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[6].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[6].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[7].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[7].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[8].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[8].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[9].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[9].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[10].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[10].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[11].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[11].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[12].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[12].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[13].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[13].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[14].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[14].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[15].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[15].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[16].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[16].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[17].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[17].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[18].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[18].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[19].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[19].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[20].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[20].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[21].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[21].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[22].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[22].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[23].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[23].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[24].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[24].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[25].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[25].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[26].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[26].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[27].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[27].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[28].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[28].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[29].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[29].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[30].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[30].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[31].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[31].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[32].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[32].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[33].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[33].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[34].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[34].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[35].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[35].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[36].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[36].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[37].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[37].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[38].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[38].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[39].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[39].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[40].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[40].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[41].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[41].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[42].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[42].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[43].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[43].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[44].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[44].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[45].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[45].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[46].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[46].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[47].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[47].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[48].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[48].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[49].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[49].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[50].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[50].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[51].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[51].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[52].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[52].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[53].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[53].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[54].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[54].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[55].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[55].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[56].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[56].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[57].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[57].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[58].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[58].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[59].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[59].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[60].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[60].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[61].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[61].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[62].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[62].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[63].int8_to_fp32'
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0/floating_point_0_in_context.xdc] for cell 'dpe_inst/GEN_CONV[63].int8_to_fp32'
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/constrs_1/new/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2820.105 ; gain = 0.000 ; free physical = 1155 ; free virtual = 21224
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2820.105 ; gain = 0.000 ; free physical = 1155 ; free virtual = 21224
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[0].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[10].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[11].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[12].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[13].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[14].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[15].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[16].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[17].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[18].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[19].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[1].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[20].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[21].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[22].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[23].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[24].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[25].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[26].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[27].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[28].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[29].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[2].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[30].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[31].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[3].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[4].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[5].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[6].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[7].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[8].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL1[9].add_lvl1' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[0].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[10].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[11].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[12].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[13].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[14].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[15].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[1].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[2].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[3].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[4].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[5].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[6].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[7].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[8].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL2[9].add_lvl2' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL3[0].add_lvl3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL3[1].add_lvl3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL3[2].add_lvl3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL3[3].add_lvl3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL3[4].add_lvl3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL3[5].add_lvl3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL3[6].add_lvl3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL3[7].add_lvl3' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL4[0].add_lvl4' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL4[1].add_lvl4' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL4[2].add_lvl4' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL4[3].add_lvl4' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL5[0].add_lvl5' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_ADD_LVL5[1].add_lvl5' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[0].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[10].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[11].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[12].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[13].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[14].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[15].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[16].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[17].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[18].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[19].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[1].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[20].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[21].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[22].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[23].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[24].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[25].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[26].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[27].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[28].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[29].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[2].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[30].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[31].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[32].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[33].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[34].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[35].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[36].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[37].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[38].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[39].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[3].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[40].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[41].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[42].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'dpe_inst/GEN_CONV[43].int8_to_fp32' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+INFO: [Common 17-14] Message 'Timing 38-316' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1233 ; free virtual = 21302
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1233 ; free virtual = 21302
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[0].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[10].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[11].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[12].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[13].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[14].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[15].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[16].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[17].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[18].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[19].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[1].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[20].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[21].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[22].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[23].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[24].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[25].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[26].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[27].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[28].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[29].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[2].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[30].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[31].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[3].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[4].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[5].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[6].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[7].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[8].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL1[9].add_lvl1 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[0].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[10].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[11].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[12].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[13].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[14].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[15].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[1].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[2].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[3].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[4].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[5].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[6].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[7].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[8].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL2[9].add_lvl2 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL3[0].add_lvl3 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL3[1].add_lvl3 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL3[2].add_lvl3 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL3[3].add_lvl3 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL3[4].add_lvl3 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL3[5].add_lvl3 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL3[6].add_lvl3 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL3[7].add_lvl3 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL4[0].add_lvl4 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL4[1].add_lvl4 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL4[2].add_lvl4 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL4[3].add_lvl4 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL5[0].add_lvl5 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_ADD_LVL5[1].add_lvl5 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/add_lvl6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[0].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[10].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[11].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[12].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[13].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[14].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[15].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[16].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[17].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[18].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[19].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[1].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[20].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[21].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[22].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[23].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[24].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[25].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[26].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[27].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[28].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[29].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[2].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[30].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[31].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[32].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[33].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[34].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[35].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[36].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[37].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[38].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[39].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[3].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[40].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[41].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[42].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[43].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[44].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[45].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[46].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[47].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[48].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[49].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[4].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[50].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[51].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[52].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[53].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[54].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[55].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[56].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[57].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[58].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[59].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[5].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[60].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[61].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[62].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[63].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[6].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[7].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[8].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_MUL[9].fp_mult . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[0].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[10].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[11].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[12].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[13].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[14].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[15].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[16].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[17].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[18].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[19].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[1].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[20].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[21].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[22].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[23].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[24].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[25].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[26].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[27].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[28].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[29].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[2].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[30].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[31].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[32].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[33].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[34].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[35].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[36].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[37].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[38].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[39].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[3].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[40].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[41].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[42].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[43].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[44].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[45].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[46].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[47].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[48].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[49].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[4].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[50].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[51].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[52].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[53].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[54].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[55].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[56].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[57].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[58].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[59].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[5].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[60].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[61].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[62].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[63].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[6].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[7].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[8].int8_to_fp32 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dpe_inst/\GEN_CONV[9].int8_to_fp32 . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1233 ; free virtual = 21302
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1229 ; free virtual = 21300
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              512 Bit    Registers := 1     
+	               32 Bit    Registers := 64    
++---RAMs : 
+	              512 Bit	(16 X 32 bit)          RAMs := 64    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1215 ; free virtual = 21290
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------------+-----------------------------------+-----------+----------------------+----------------+
+|Module Name            | RTL Object                        | Inference | Size (Depth x Width) | Primitives     | 
++-----------------------+-----------------------------------+-----------+----------------------+----------------+
+|top_dot_product_engine | GEN_X_BRAMS[0].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[1].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[2].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[3].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[4].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[5].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[6].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[7].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[8].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[9].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[10].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[11].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[12].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[13].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[14].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[15].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[16].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[17].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[18].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[19].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[20].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[21].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[22].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[23].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[24].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[25].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[26].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[27].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[28].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[29].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[30].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[31].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[32].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[33].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[34].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[35].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[36].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[37].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[38].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[39].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[40].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[41].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[42].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[43].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[44].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[45].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[46].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[47].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[48].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[49].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[50].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[51].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[52].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[53].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[54].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[55].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[56].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[57].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[58].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[59].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[60].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[61].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[62].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[63].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
++-----------------------+-----------------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1098 ; free virtual = 21165
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1086 ; free virtual = 21153
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-----------------------+-----------------------------------+-----------+----------------------+----------------+
+|Module Name            | RTL Object                        | Inference | Size (Depth x Width) | Primitives     | 
++-----------------------+-----------------------------------+-----------+----------------------+----------------+
+|top_dot_product_engine | GEN_X_BRAMS[0].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[1].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[2].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[3].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[4].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[5].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[6].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[7].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[8].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[9].bram_inst/mem_reg  | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[10].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[11].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[12].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[13].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[14].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[15].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[16].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[17].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[18].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[19].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[20].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[21].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[22].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[23].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[24].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[25].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[26].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[27].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[28].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[29].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[30].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[31].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[32].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[33].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[34].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[35].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[36].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[37].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[38].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[39].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[40].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[41].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[42].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[43].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[44].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[45].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[46].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[47].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[48].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[49].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[50].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[51].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[52].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[53].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[54].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[55].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[56].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[57].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[58].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[59].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[60].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[61].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[62].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
+|top_dot_product_engine | GEN_X_BRAMS[63].bram_inst/mem_reg | Implied   | 16 x 32              | RAM16X1S x 32  | 
++-----------------------+-----------------------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1116 ; free virtual = 21179
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1112 ; free virtual = 21175
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1112 ; free virtual = 21175
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1112 ; free virtual = 21175
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1112 ; free virtual = 21175
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1112 ; free virtual = 21175
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1112 ; free virtual = 21175
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |floating_point_0 |        64|
+|2     |floating_point_1 |        64|
+|3     |floating_point_2 |        63|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |floating_point   |     1|
+|2     |floating_point_0 |    63|
+|65    |floating_point   |     1|
+|66    |floating_point_1 |    63|
+|129   |floating_point   |     1|
+|130   |floating_point_2 |    62|
+|192   |BUFG             |     1|
+|193   |RAM16X1S         |  2048|
+|194   |FDCE             |   512|
+|195   |FDRE             |  2048|
+|196   |IBUF             |   113|
+|197   |OBUF             |    33|
++------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1112 ; free virtual = 21175
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2820.105 ; gain = 0.000 ; free physical = 1166 ; free virtual = 21228
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 2820.105 ; gain = 64.031 ; free physical = 1166 ; free virtual = 21228
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2820.105 ; gain = 0.000 ; free physical = 1255 ; free virtual = 21318
+INFO: [Netlist 29-17] Analyzing 2048 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2820.105 ; gain = 0.000 ; free physical = 1174 ; free virtual = 21237
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2048 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 2048 instances
+
+Synth Design complete, checksum: 1f9e68d7
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 167 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 2820.105 ; gain = 72.035 ; free physical = 1370 ; free virtual = 21434
+INFO: [Common 17-1381] The checkpoint '/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/synth_1/top_dot_product_engine.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_dot_product_engine_utilization_synth.rpt -pb top_dot_product_engine_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May  1 10:35:28 2025...

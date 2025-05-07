@@ -1,0 +1,534 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date             : Thu May  1 10:42:17 2025
+| Host             : hp running 64-bit Ubuntu 20.04.6 LTS
+| Command          : report_power -file top_dot_product_engine_power_routed.rpt -pb top_dot_product_engine_power_summary_routed.pb -rpx top_dot_product_engine_power_routed.rpx
+| Design           : top_dot_product_engine
+| Device           : xc7k325tffg900-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 2.120        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.950        |
+| Device Static (W)        | 0.170        |
+| Effective TJA (C/W)      | 1.8          |
+| Max Ambient (C)          | 81.2         |
+| Junction Temperature (C) | 28.8         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.410 |        3 |       --- |             --- |
+| Slice Logic              |     0.451 |    99700 |       --- |             --- |
+|   LUT as Logic           |     0.369 |    23109 |    203800 |           11.34 |
+|   Register               |     0.055 |    48725 |    407600 |           11.95 |
+|   CARRY4                 |     0.017 |     2605 |     50950 |            5.11 |
+|   LUT as Shift Register  |     0.007 |      750 |     64000 |            1.17 |
+|   LUT as Distributed RAM |     0.003 |     2048 |     64000 |            3.20 |
+|   Others                 |     0.000 |    11891 |       --- |             --- |
+| Signals                  |     0.673 |    72611 |       --- |             --- |
+| DSPs                     |     0.372 |      254 |       840 |           30.24 |
+| I/O                      |     0.044 |      146 |       500 |           29.20 |
+| Static Power             |     0.170 |          |           |                 |
+| Total                    |     2.120 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     1.985 |       1.906 |      0.079 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.032 |       0.004 |      0.029 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.022 |       0.021 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.3                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |             5.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| top_dot_product_engine        |     1.950 |
+|   dpe_inst                    |     1.831 |
+|     GEN_ADD_LVL1[0].add_lvl1  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[10].add_lvl1 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[11].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[12].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[13].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[14].add_lvl1 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[15].add_lvl1 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[16].add_lvl1 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[17].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[18].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[19].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[1].add_lvl1  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[20].add_lvl1 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[21].add_lvl1 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[22].add_lvl1 |     0.019 |
+|       inst                    |     0.019 |
+|     GEN_ADD_LVL1[23].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[24].add_lvl1 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[25].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[26].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[27].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[28].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[29].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[2].add_lvl1  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[30].add_lvl1 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[31].add_lvl1 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[3].add_lvl1  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[4].add_lvl1  |     0.019 |
+|       inst                    |     0.019 |
+|     GEN_ADD_LVL1[5].add_lvl1  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL1[6].add_lvl1  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[7].add_lvl1  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[8].add_lvl1  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL1[9].add_lvl1  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL2[0].add_lvl2  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[10].add_lvl2 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[11].add_lvl2 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[12].add_lvl2 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[13].add_lvl2 |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL2[14].add_lvl2 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[15].add_lvl2 |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[1].add_lvl2  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[2].add_lvl2  |     0.019 |
+|       inst                    |     0.019 |
+|     GEN_ADD_LVL2[3].add_lvl2  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[4].add_lvl2  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[5].add_lvl2  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[6].add_lvl2  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[7].add_lvl2  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL2[8].add_lvl2  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL2[9].add_lvl2  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL3[0].add_lvl3  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL3[1].add_lvl3  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL3[2].add_lvl3  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL3[3].add_lvl3  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL3[4].add_lvl3  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL3[5].add_lvl3  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL3[6].add_lvl3  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL3[7].add_lvl3  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL4[0].add_lvl4  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL4[1].add_lvl4  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL4[2].add_lvl4  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL4[3].add_lvl4  |     0.018 |
+|       inst                    |     0.018 |
+|     GEN_ADD_LVL5[0].add_lvl5  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_ADD_LVL5[1].add_lvl5  |     0.017 |
+|       inst                    |     0.017 |
+|     GEN_CONV[0].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[10].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[11].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[12].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[13].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[14].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[15].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[16].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[17].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[18].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[19].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[1].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[20].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[21].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[22].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[23].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[24].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[25].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[26].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[27].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[28].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[29].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[2].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[30].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[31].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[32].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[33].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[34].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[35].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[36].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[37].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[38].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[39].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[3].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[40].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[41].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[42].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[43].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[44].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[45].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[46].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[47].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[48].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[49].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[4].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[50].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[51].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[52].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[53].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[54].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[55].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[56].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[57].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[58].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[59].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[5].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[60].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[61].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[62].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[63].int8_to_fp32 |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[6].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[7].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[8].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_CONV[9].int8_to_fp32  |     0.002 |
+|       inst                    |     0.002 |
+|     GEN_MUL[0].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[10].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[11].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[12].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[13].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[14].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[15].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[16].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[17].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[18].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[19].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[1].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[20].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[21].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[22].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[23].fp_mult       |     0.011 |
+|       inst                    |     0.011 |
+|     GEN_MUL[24].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[25].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[26].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[27].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[28].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[29].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[2].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[30].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[31].fp_mult       |     0.010 |
+|       inst                    |     0.010 |
+|     GEN_MUL[32].fp_mult       |     0.010 |
+|       inst                    |     0.010 |
+|     GEN_MUL[33].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[34].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[35].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[36].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[37].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[38].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[39].fp_mult       |     0.010 |
+|       inst                    |     0.010 |
+|     GEN_MUL[3].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[40].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[41].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[42].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[43].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[44].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[45].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[46].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[47].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[48].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[49].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[4].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[50].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[51].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[52].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[53].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[54].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[55].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[56].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[57].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[58].fp_mult       |     0.010 |
+|       inst                    |     0.010 |
+|     GEN_MUL[59].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[5].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[60].fp_mult       |     0.010 |
+|       inst                    |     0.010 |
+|     GEN_MUL[61].fp_mult       |     0.010 |
+|       inst                    |     0.010 |
+|     GEN_MUL[62].fp_mult       |     0.010 |
+|       inst                    |     0.010 |
+|     GEN_MUL[63].fp_mult       |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[6].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[7].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[8].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     GEN_MUL[9].fp_mult        |     0.009 |
+|       inst                    |     0.009 |
+|     add_lvl6                  |     0.018 |
+|       inst                    |     0.018 |
+|   sipo_inst                   |     0.008 |
++-------------------------------+-----------+
+
+

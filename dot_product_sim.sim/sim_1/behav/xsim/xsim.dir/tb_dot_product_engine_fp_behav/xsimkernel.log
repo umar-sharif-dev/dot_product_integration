@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_dot_product_engine_fp_behav/xsimk -simmode gui -wdb tb_dot_product_engine_fp_behav.wdb -simrunnum 0 -socket 39505
+Design successfully loaded
+Design Loading Memory Usage: 145156 KB (Peak: 146116 KB)
+Design Loading CPU Usage: 350 ms
+Simulation completed
+Simulation Memory Usage: 225860 KB (Peak: 284424 KB)
+Simulation CPU Usage: 1620 ms

@@ -1,0 +1,675 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu May  1 10:35:33 2025
+# Process ID: 954204
+# Current directory: /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1
+# Command line: vivado -log top_dot_product_engine.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_dot_product_engine.tcl -notrace
+# Log file: /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1/top_dot_product_engine.vdi
+# Journal file: /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1/vivado.jou
+# Running On: hp, OS: Linux, CPU Frequency: 900.000 MHz, CPU Physical cores: 4, Host memory: 16650 MB
+#-----------------------------------------------------------
+source top_dot_product_engine.tcl -notrace
+Command: link_design -top top_dot_product_engine -part xc7k325tffg900-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+INFO: [Project 1-454] Reading design checkpoint '/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_2/floating_point_2.dcp' for cell 'dpe_inst/GEN_ADD_LVL1[0].add_lvl1'
+INFO: [Project 1-454] Reading design checkpoint '/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_0/floating_point_0.dcp' for cell 'dpe_inst/GEN_CONV[0].int8_to_fp32'
+INFO: [Project 1-454] Reading design checkpoint '/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_1/floating_point_1.dcp' for cell 'dpe_inst/GEN_MUL[0].fp_mult'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2748.141 ; gain = 0.000 ; free physical = 1427 ; free virtual = 21492
+INFO: [Netlist 29-17] Analyzing 5163 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/constrs_1/new/constraints.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2804.070 ; gain = 0.000 ; free physical = 1273 ; free virtual = 21340
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2048 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 2048 instances
+
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 2804.070 ; gain = 56.027 ; free physical = 1273 ; free virtual = 21340
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2876.105 ; gain = 64.031 ; free physical = 1265 ; free virtual = 21331
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1765ac929
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 3356.285 ; gain = 480.180 ; free physical = 681 ; free virtual = 20760
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 127 inverter(s) to 631 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 54a3b6cc
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 3604.238 ; gain = 1.000 ; free physical = 589 ; free virtual = 20668
+INFO: [Opt 31-389] Phase Retarget created 2151 cells and removed 2534 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 63 inverter(s) to 126 load pin(s).
+Phase 2 Constant propagation | Checksum: e546c0eb
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3604.238 ; gain = 1.000 ; free physical = 588 ; free virtual = 20667
+INFO: [Opt 31-389] Phase Constant propagation created 1845 cells and removed 9650 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 5b3bcdee
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3604.238 ; gain = 1.000 ; free physical = 586 ; free virtual = 20665
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1596 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 5b3bcdee
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 3604.238 ; gain = 1.000 ; free physical = 581 ; free virtual = 20660
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 5b3bcdee
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 3604.238 ; gain = 1.000 ; free physical = 579 ; free virtual = 20658
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 5b3bcdee
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 3604.238 ; gain = 1.000 ; free physical = 579 ; free virtual = 20658
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |            2151  |            2534  |                                              0  |
+|  Constant propagation         |            1845  |            9650  |                                              0  |
+|  Sweep                        |               0  |            1596  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 3604.238 ; gain = 0.000 ; free physical = 573 ; free virtual = 20655
+Ending Logic Optimization Task | Checksum: 1a6baf7d1
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 3604.238 ; gain = 1.000 ; free physical = 573 ; free virtual = 20655
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1a6baf7d1
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3604.238 ; gain = 0.000 ; free physical = 578 ; free virtual = 20658
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1a6baf7d1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3604.238 ; gain = 0.000 ; free physical = 578 ; free virtual = 20658
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3604.238 ; gain = 0.000 ; free physical = 578 ; free virtual = 20658
+Ending Netlist Obfuscation Task | Checksum: 1a6baf7d1
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3604.238 ; gain = 0.000 ; free physical = 578 ; free virtual = 20658
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:31 . Memory (MB): peak = 3604.238 ; gain = 800.168 ; free physical = 577 ; free virtual = 20657
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1/top_dot_product_engine_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 3644.258 ; gain = 40.020 ; free physical = 512 ; free virtual = 20604
+INFO: [runtcl-4] Executing : report_drc -file top_dot_product_engine_drc_opted.rpt -pb top_dot_product_engine_drc_opted.pb -rpx top_dot_product_engine_drc_opted.rpx
+Command: report_drc -file top_dot_product_engine_drc_opted.rpt -pb top_dot_product_engine_drc_opted.pb -rpx top_dot_product_engine_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1/top_dot_product_engine_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:41 ; elapsed = 00:00:10 . Memory (MB): peak = 3832.801 ; gain = 188.543 ; free physical = 277 ; free virtual = 20405
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[0].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[10].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[11].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[12].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[13].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[14].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[15].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[16].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[17].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[18].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[19].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[1].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[20].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[21].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[22].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[23].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[24].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[25].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[26].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[27].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[28].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[29].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[2].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[30].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[31].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[3].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[4].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[5].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[6].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[7].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[8].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL1[9].add_lvl1/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[0].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[10].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[11].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[12].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[13].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[14].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[15].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[1].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[2].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[3].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[4].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[5].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[6].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[7].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[8].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL2[9].add_lvl2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL3[0].add_lvl3/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL3[1].add_lvl3/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL3[2].add_lvl3/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL3[3].add_lvl3/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL3[4].add_lvl3/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL3[5].add_lvl3/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL3[6].add_lvl3/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL3[7].add_lvl3/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL4[0].add_lvl4/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL4[1].add_lvl4/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL4[2].add_lvl4/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL4[3].add_lvl4/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL5[0].add_lvl5/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/GEN_ADD_LVL5[1].add_lvl5/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [DRC REQP-1725] DSP_Abus_sign_bit_alert: dpe_inst/add_lvl6/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP: When using the PreAdder and USE_DPORT is TRUE, the A operand should be restricted to 24 bit two's complement (and sign extended) to avoid over/underflow in the pre-add stage.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 63 Advisories
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3832.801 ; gain = 0.000 ; free physical = 293 ; free virtual = 20400
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: df412083
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3832.801 ; gain = 0.000 ; free physical = 293 ; free virtual = 20400
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3832.801 ; gain = 0.000 ; free physical = 292 ; free virtual = 20399
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 848d2b23
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 3832.801 ; gain = 0.000 ; free physical = 332 ; free virtual = 20413
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1570235ff
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:23 . Memory (MB): peak = 3878.609 ; gain = 45.809 ; free physical = 359 ; free virtual = 20389
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1570235ff
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:23 . Memory (MB): peak = 3878.609 ; gain = 45.809 ; free physical = 359 ; free virtual = 20389
+Phase 1 Placer Initialization | Checksum: 1570235ff
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:23 . Memory (MB): peak = 3878.609 ; gain = 45.809 ; free physical = 361 ; free virtual = 20391
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: b7aa8d16
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:27 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 287 ; free virtual = 20315
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 15a7e78e9
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:30 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 282 ; free virtual = 20309
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 15a7e78e9
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:30 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 282 ; free virtual = 20309
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 5557 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 2680 nets or LUTs. Breaked 0 LUT, combined 2680 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3958.648 ; gain = 0.000 ; free physical = 209 ; free virtual = 20233
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |           2680  |                  2680  |           0  |           1  |  00:00:02  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |           2680  |                  2680  |           0  |           4  |  00:00:03  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: 2099861fc
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:01:07 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 156 ; free virtual = 20224
+Phase 2.4 Global Placement Core | Checksum: 210f04a5f
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:10 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 160 ; free virtual = 20179
+Phase 2 Global Placement | Checksum: 210f04a5f
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:10 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 183 ; free virtual = 20201
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 2042724fb
+
+Time (s): cpu = 00:02:56 ; elapsed = 00:01:14 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 189 ; free virtual = 20189
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1ef89e673
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:01:21 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 178 ; free virtual = 20166
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1651ad40c
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:01:22 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 168 ; free virtual = 20161
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 163731c87
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:01:23 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 168 ; free virtual = 20161
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 20a6d84f6
+
+Time (s): cpu = 00:03:35 ; elapsed = 00:01:39 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 177 ; free virtual = 20094
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1ab161abf
+
+Time (s): cpu = 00:03:38 ; elapsed = 00:01:41 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 148 ; free virtual = 20096
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 1a4cdf051
+
+Time (s): cpu = 00:03:39 ; elapsed = 00:01:43 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 163 ; free virtual = 20094
+Phase 3 Detail Placement | Checksum: 1a4cdf051
+
+Time (s): cpu = 00:03:39 ; elapsed = 00:01:43 . Memory (MB): peak = 3958.648 ; gain = 125.848 ; free physical = 163 ; free virtual = 20092
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1abe4e58b
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.589 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 2405156cc
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 4029.336 ; gain = 0.000 ; free physical = 164 ; free virtual = 20067
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 17faa63dc
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 4029.336 ; gain = 0.000 ; free physical = 156 ; free virtual = 20056
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1abe4e58b
+
+Time (s): cpu = 00:04:26 ; elapsed = 00:01:58 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 157 ; free virtual = 20057
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.589. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: ce2cf0b1
+
+Time (s): cpu = 00:04:27 ; elapsed = 00:01:58 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 165 ; free virtual = 20059
+
+Time (s): cpu = 00:04:27 ; elapsed = 00:01:58 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 165 ; free virtual = 20059
+Phase 4.1 Post Commit Optimization | Checksum: ce2cf0b1
+
+Time (s): cpu = 00:04:28 ; elapsed = 00:01:59 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 165 ; free virtual = 20060
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: ce2cf0b1
+
+Time (s): cpu = 00:04:29 ; elapsed = 00:02:00 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 178 ; free virtual = 20065
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                2x2|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                2x2|
+|___________|___________________|___________________|
+|       West|                1x1|                2x2|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: ce2cf0b1
+
+Time (s): cpu = 00:04:29 ; elapsed = 00:02:00 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 168 ; free virtual = 20064
+Phase 4.3 Placer Reporting | Checksum: ce2cf0b1
+
+Time (s): cpu = 00:04:30 ; elapsed = 00:02:01 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 168 ; free virtual = 20063
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4029.336 ; gain = 0.000 ; free physical = 169 ; free virtual = 20065
+
+Time (s): cpu = 00:04:30 ; elapsed = 00:02:01 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 169 ; free virtual = 20065
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: b3e46bd4
+
+Time (s): cpu = 00:04:30 ; elapsed = 00:02:01 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 163 ; free virtual = 20059
+Ending Placer Task | Checksum: 9de807b1
+
+Time (s): cpu = 00:04:30 ; elapsed = 00:02:01 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 176 ; free virtual = 20062
+INFO: [Common 17-83] Releasing license: Implementation
+125 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:04:37 ; elapsed = 00:02:05 . Memory (MB): peak = 4029.336 ; gain = 196.535 ; free physical = 292 ; free virtual = 20178
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 4037.340 ; gain = 0.000 ; free physical = 171 ; free virtual = 20158
+INFO: [Common 17-1381] The checkpoint '/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1/top_dot_product_engine_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:35 ; elapsed = 00:00:20 . Memory (MB): peak = 4053.348 ; gain = 24.012 ; free physical = 282 ; free virtual = 20188
+INFO: [runtcl-4] Executing : report_io -file top_dot_product_engine_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.37 . Memory (MB): peak = 4053.348 ; gain = 0.000 ; free physical = 238 ; free virtual = 20149
+INFO: [runtcl-4] Executing : report_utilization -file top_dot_product_engine_utilization_placed.rpt -pb top_dot_product_engine_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_dot_product_engine_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.41 . Memory (MB): peak = 4053.348 ; gain = 0.000 ; free physical = 254 ; free virtual = 20168
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+134 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:08 . Memory (MB): peak = 4053.348 ; gain = 0.000 ; free physical = 217 ; free virtual = 20133
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 4053.348 ; gain = 0.000 ; free physical = 169 ; free virtual = 20110
+INFO: [Common 17-1381] The checkpoint '/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1/top_dot_product_engine_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 4053.348 ; gain = 0.000 ; free physical = 287 ; free virtual = 20121
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 330d660d ConstDB: 0 ShapeSum: 6adaa1a4 RouteDB: 0
+Post Restoration Checksum: NetGraph: 9c1e53b3 NumContArr: 913a45be Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 12d589971
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:28 . Memory (MB): peak = 4228.418 ; gain = 167.066 ; free physical = 232 ; free virtual = 19844
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 12d589971
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:29 . Memory (MB): peak = 4228.418 ; gain = 167.066 ; free physical = 251 ; free virtual = 19864
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 12d589971
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:29 . Memory (MB): peak = 4261.043 ; gain = 199.691 ; free physical = 197 ; free virtual = 19811
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 12d589971
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:29 . Memory (MB): peak = 4261.043 ; gain = 199.691 ; free physical = 198 ; free virtual = 19811
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 13fa698c6
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:00:46 . Memory (MB): peak = 4315.152 ; gain = 253.801 ; free physical = 209 ; free virtual = 19741
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.502  | TNS=0.000  | WHS=-0.220 | THS=-1714.442|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 72611
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 72611
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 199b957bc
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:00:51 . Memory (MB): peak = 4340.379 ; gain = 279.027 ; free physical = 214 ; free virtual = 19727
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 199b957bc
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:00:51 . Memory (MB): peak = 4340.379 ; gain = 279.027 ; free physical = 214 ; free virtual = 19727
+Phase 3 Initial Routing | Checksum: 14c4e6ff0
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:00:56 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 259 ; free virtual = 19729
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 3186
+ Number of Nodes with overlaps = 37
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.485  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 17e4772e5
+
+Time (s): cpu = 00:02:51 ; elapsed = 00:01:09 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 237 ; free virtual = 19716
+Phase 4 Rip-up And Reroute | Checksum: 17e4772e5
+
+Time (s): cpu = 00:02:51 ; elapsed = 00:01:09 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 237 ; free virtual = 19716
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 17e4772e5
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:01:09 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 237 ; free virtual = 19716
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 17e4772e5
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:01:09 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 237 ; free virtual = 19716
+Phase 5 Delay and Skew Optimization | Checksum: 17e4772e5
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:01:09 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 236 ; free virtual = 19716
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 10fe1e85d
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:12 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 239 ; free virtual = 19718
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.572  | TNS=0.000  | WHS=0.053  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1fc1d7d35
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:13 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 239 ; free virtual = 19718
+Phase 6 Post Hold Fix | Checksum: 1fc1d7d35
+
+Time (s): cpu = 00:03:02 ; elapsed = 00:01:13 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 239 ; free virtual = 19718
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 2.61098 %
+  Global Horizontal Routing Utilization  = 4.28476 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1b448da09
+
+Time (s): cpu = 00:03:03 ; elapsed = 00:01:13 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 239 ; free virtual = 19718
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1b448da09
+
+Time (s): cpu = 00:03:03 ; elapsed = 00:01:13 . Memory (MB): peak = 4480.004 ; gain = 418.652 ; free physical = 238 ; free virtual = 19717
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: f3058966
+
+Time (s): cpu = 00:03:09 ; elapsed = 00:01:17 . Memory (MB): peak = 4528.027 ; gain = 466.676 ; free physical = 254 ; free virtual = 19721
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.572  | TNS=0.000  | WHS=0.053  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: f3058966
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:01:19 . Memory (MB): peak = 4528.027 ; gain = 466.676 ; free physical = 236 ; free virtual = 19731
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:03:18 ; elapsed = 00:01:20 . Memory (MB): peak = 4528.027 ; gain = 466.676 ; free physical = 319 ; free virtual = 19822
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+148 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:59 ; elapsed = 00:01:31 . Memory (MB): peak = 4528.027 ; gain = 474.680 ; free physical = 320 ; free virtual = 19823
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 4528.027 ; gain = 0.000 ; free physical = 156 ; free virtual = 19793
+INFO: [Common 17-1381] The checkpoint '/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1/top_dot_product_engine_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:40 ; elapsed = 00:00:21 . Memory (MB): peak = 4528.027 ; gain = 0.000 ; free physical = 347 ; free virtual = 19810
+INFO: [runtcl-4] Executing : report_drc -file top_dot_product_engine_drc_routed.rpt -pb top_dot_product_engine_drc_routed.pb -rpx top_dot_product_engine_drc_routed.rpx
+Command: report_drc -file top_dot_product_engine_drc_routed.rpt -pb top_dot_product_engine_drc_routed.pb -rpx top_dot_product_engine_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1/top_dot_product_engine_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:47 ; elapsed = 00:00:12 . Memory (MB): peak = 4528.027 ; gain = 0.000 ; free physical = 304 ; free virtual = 19766
+INFO: [runtcl-4] Executing : report_methodology -file top_dot_product_engine_methodology_drc_routed.rpt -pb top_dot_product_engine_methodology_drc_routed.pb -rpx top_dot_product_engine_methodology_drc_routed.rpx
+Command: report_methodology -file top_dot_product_engine_methodology_drc_routed.rpt -pb top_dot_product_engine_methodology_drc_routed.pb -rpx top_dot_product_engine_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/impl_1/top_dot_product_engine_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:39 ; elapsed = 00:00:11 . Memory (MB): peak = 4528.027 ; gain = 0.000 ; free physical = 320 ; free virtual = 19774
+INFO: [runtcl-4] Executing : report_power -file top_dot_product_engine_power_routed.rpt -pb top_dot_product_engine_power_summary_routed.pb -rpx top_dot_product_engine_power_routed.rpx
+Command: report_power -file top_dot_product_engine_power_routed.rpt -pb top_dot_product_engine_power_summary_routed.pb -rpx top_dot_product_engine_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+160 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:33 ; elapsed = 00:00:10 . Memory (MB): peak = 4528.027 ; gain = 0.000 ; free physical = 271 ; free virtual = 19742
+INFO: [runtcl-4] Executing : report_route_status -file top_dot_product_engine_route_status.rpt -pb top_dot_product_engine_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_dot_product_engine_timing_summary_routed.rpt -pb top_dot_product_engine_timing_summary_routed.pb -rpx top_dot_product_engine_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_dot_product_engine_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_dot_product_engine_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_dot_product_engine_bus_skew_routed.rpt -pb top_dot_product_engine_bus_skew_routed.pb -rpx top_dot_product_engine_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Common 17-206] Exiting Vivado at Thu May  1 10:42:24 2025...
