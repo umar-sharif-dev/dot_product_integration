@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/floating_point_0_synth_1'
+HD_PWD='/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.runs/floating_point_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -58,7 +58,7 @@ COMPONENT floating_point_0
     aresetn : IN STD_LOGIC;
     s_axis_a_tvalid : IN STD_LOGIC;
     s_axis_a_tready : OUT STD_LOGIC;
-    s_axis_a_tdata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    s_axis_a_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axis_result_tvalid : OUT STD_LOGIC;
     m_axis_result_tready : IN STD_LOGIC;
     m_axis_result_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)

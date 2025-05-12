@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tb_top_dot_product_engine_multi;
+module tb_top_dot_product_engine;
 
   logic clk = 0;
   logic rst = 1;
@@ -8,40 +8,51 @@ module tb_top_dot_product_engine_multi;
 
   logic en = 1;
   logic start;
-  logic [7:0]  weight_byte;
+  logic [15:0] weight_element;
+  logic [2:0]  data_type;
   logic [3:0]  x_wr_addr;
   logic [31:0] x_wr_data;
   logic [63:0] x_wr_en;
 
   logic [31:0] y_out;
-  logic done;
+  logic        done;
 
   // Clock generation (200 MHz)
   always #2.5 clk = ~clk;
 
   top_dot_product_engine dut (
-    .clk(clk),
-    .rst(rst),
-    .rstn(rstn),
-    .en(en),
-    .start(start),
-    .weight_byte(weight_byte),
-    .x_wr_addr(x_wr_addr),
-    .x_wr_data(x_wr_data),
-    .x_wr_en(x_wr_en),
-    .y_out(y_out),
-    .done(done)
+    .clk           (clk),
+    .rst           (rst),
+    .rstn          (rstn),
+    .en            (en),
+    .start         (start),
+    .weight_element(weight_element),
+    .data_type     (data_type),
+    .x_wr_addr     (x_wr_addr),
+    .x_wr_data     (x_wr_data),
+    .x_wr_en       (x_wr_en),
+    .y_out         (y_out),
+    .done          (done)
   );
 
-  int i, j;
-  logic [31:0] results [0:63];
+  int i;
+  logic [31:0] results [0:0];
 
-  // Task to preload x_vector[i] = 1.0
+  // Function to interpret 32-bit logic as real
+  function real fp32_to_real(input logic [31:0] val);
+    int unsigned temp;
+    begin
+      temp = val;
+      fp32_to_real = $bitstoshortreal(temp);
+    end
+  endfunction
+
+  // Task to preload x_vector[i] = 1.0 (FP32)
   task preload_bram;
-    for (i = 0; i < 64; i++) begin
+    for (i = 0; i < 32; i++) begin
       @(posedge clk);
       x_wr_en   = 64'b1 << i;
-      x_wr_data = 32'h3F800000; // FP32: 1.0
+      x_wr_data = 32'h3F800000; // 1.0 in FP32
       x_wr_addr = 4'd0;
     end
     @(posedge clk);
@@ -50,7 +61,8 @@ module tb_top_dot_product_engine_multi;
 
   initial begin
     start = 0;
-    weight_byte = 0;
+    weight_element = 0;
+    data_type = 3'd2; // INT8
     x_wr_en = 0;
     x_wr_data = 0;
     x_wr_addr = 0;
@@ -61,18 +73,20 @@ module tb_top_dot_product_engine_multi;
 
     preload_bram();
 
-    for (j = 0; j < 128; j++) begin
-        weight_byte = j; // unique row per dot product
-        @(posedge clk);
-        
-        if (j >= 63) begin
-            start = 1;
-        end
-    end  
-    
+    // Feed 32 INT8 values
+    for (i = 0; i < 32; i++) begin
+      @(posedge clk);
+      weight_element = i[7:0]; // 8-bit INT values
+    end
+
+    @(posedge clk);
+    start = 1;
+    @(posedge clk);
+    start = 0;
+
     wait(done);
-    results[i] = y_out;
-    $display("Dot product %0d result = %h", i, y_out);
+    results[0] = y_out;
+    $display("Dot product result = %h (%f)", y_out, fp32_to_real(y_out));
 
     #20;
     $finish;

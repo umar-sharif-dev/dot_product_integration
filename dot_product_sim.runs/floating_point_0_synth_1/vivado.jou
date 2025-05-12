@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Wed Apr 30 20:45:33 2025
-# Process ID: 699886
-# Current directory: /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/floating_point_0_synth_1
+# Start of session at: Mon May 12 02:16:22 2025
+# Process ID: 562502
+# Current directory: /home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.runs/floating_point_0_synth_1
 # Command line: vivado -log floating_point_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source floating_point_0.tcl
-# Log file: /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/floating_point_0_synth_1/floating_point_0.vds
-# Journal file: /home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.runs/floating_point_0_synth_1/vivado.jou
-# Running On: hp, OS: Linux, CPU Frequency: 1100.000 MHz, CPU Physical cores: 4, Host memory: 16650 MB
+# Log file: /home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.runs/floating_point_0_synth_1/floating_point_0.vds
+# Journal file: /home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.runs/floating_point_0_synth_1/vivado.jou
+# Running On: hp, OS: Linux, CPU Frequency: 2800.000 MHz, CPU Physical cores: 4, Host memory: 16650 MB
 #-----------------------------------------------------------
 source floating_point_0.tcl -notrace

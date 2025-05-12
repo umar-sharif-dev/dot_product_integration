@@ -1,112 +1,111 @@
 Vivado Simulator v2021.2
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L floating_point_v7_1_13 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_dot_product_engine_multi_behav xil_defaultlib.tb_top_dot_product_engine_multi xil_defaultlib.glbl -log elaborate.log 
+Running: /opt/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xbip_utils_v3_0_10 -L axi_utils_v2_0_6 -L xbip_pipe_v3_0_6 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_6 -L xbip_dsp48_multadd_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_17 -L floating_point_v7_1_13 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_dot_product_engine_behav xil_defaultlib.tb_top_dot_product_engine xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 's_axis_a_tdata' [/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/dot_product_engine.sv:40]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dot_product_sim/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/block_ram.sv" Line 1. Module block_ram doesn't have a timescale but at least one module in design has a timescale.
 INFO: [Common 17-14] Message 'XSIM 43-4099' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
@@ -134,17 +133,25 @@ Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
 Compiling package mult_gen_v12_0_17.dsp_pkg
 Compiling module xil_defaultlib.block_ram
-Compiling module xil_defaultlib.sipo
-Compiling architecture xilinx of entity axi_utils_v2_0_6.axi_slave_2to1 [axi_slave_2to1_default]
+Compiling module xil_defaultlib.dynamic_sipo
+Compiling architecture xilinx of entity axi_utils_v2_0_6.axi_slave_2to1 [\axi_slave_2to1(c_a_tdata_width=...]
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
 Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=7,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=31,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=32)\]
 Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.norm_zero_det [\norm_zero_det(data_width=7,norm...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=4,fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.mux4 [\mux4(c_xdevicefamily="kintex7",...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=2)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(fast_input=true)\]
 Compiling architecture rtl of entity floating_point_v7_1_13.mux4 [\mux4(c_xdevicefamily="kintex7",...]
@@ -153,12 +160,14 @@ Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=
 Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
 Compiling architecture fde_v of entity unisim.FDE [fde_default]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
-Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8,length=0,fast_inp...]
 Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ki...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [delay_default]
 Compiling architecture rtl of entity floating_point_v7_1_13.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
-Compiling architecture rtl of entity floating_point_v7_1_13.shift_msb_first [\shift_msb_first(a_width=8,resul...]
+Compiling architecture rtl of entity floating_point_v7_1_13.shift_msb_first [\shift_msb_first(a_width=32,resu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=8,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
@@ -177,11 +186,15 @@ Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\x
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=3,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=0,fast_inp...]
 Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ki...]
 Compiling architecture rtl of entity floating_point_v7_1_13.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
 Compiling architecture rtl of entity floating_point_v7_1_13.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=4)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=5)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=2)\]
 Compiling architecture synth of entity floating_point_v7_1_13.fix_to_flt_conv_exp [\fix_to_flt_conv_exp(c_xdevicefa...]
 Compiling architecture synth of entity floating_point_v7_1_13.flt_dec_op [\flt_dec_op(c_xdevicefamily="kin...]
 Compiling architecture struct of entity floating_point_v7_1_13.fix_to_flt_conv [\fix_to_flt_conv(c_xdevicefamily...]
@@ -194,10 +207,25 @@ Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7
 Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
 Compiling module xil_defaultlib.floating_point_0
 Compiling architecture xilinx of entity axi_utils_v2_0_6.axi_slave_2to1 [\axi_slave_2to1(c_a_tdata_width=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=15,length=0)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=26,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=16)\]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ki...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,fast_input=true)\]
+Compiling architecture rtl of entity floating_point_v7_1_13.mux4 [\mux4(c_xdevicefamily="kintex7",...]
+Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ki...]
+Compiling architecture rtl of entity floating_point_v7_1_13.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+Compiling architecture rtl of entity floating_point_v7_1_13.shift_msb_first [\shift_msb_first(a_width=16,resu...]
+Compiling architecture synth of entity floating_point_v7_1_13.fix_to_flt_conv_exp [\fix_to_flt_conv_exp(c_xdevicefa...]
+Compiling architecture struct of entity floating_point_v7_1_13.fix_to_flt_conv [\fix_to_flt_conv(c_xdevicefamily...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
+Compiling module xil_defaultlib.floating_point_3
+Compiling module xil_defaultlib.intN_to_fp32_wrapper
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=26,fast_input=true)...]
 Compiling architecture xilinx of entity mult_gen_v12_0_17.delay_line [\delay_line(c_xdevicefamily="kin...]
 Compiling architecture xilinx of entity mult_gen_v12_0_17.delay_line [\delay_line(c_xdevicefamily="kin...]
 Compiling architecture xilinx of entity mult_gen_v12_0_17.delay_line [\delay_line(c_xdevicefamily="kin...]
@@ -222,6 +250,8 @@ Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=
 Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ki...]
 Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
 Compiling architecture rtl of entity floating_point_v7_1_13.special_detect [\special_detect(a_fw=24)(1,7)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=4)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=2,length=4,fast_inp...]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
@@ -261,6 +291,8 @@ Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\x
 Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
 Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
 Compiling module xil_defaultlib.floating_point_1
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
+Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=7,length=0)\]
 Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ki...]
 Compiling architecture synth of entity floating_point_v7_1_13.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
 Compiling architecture struct of entity floating_point_v7_1_13.carry_chain [\carry_chain(c_xdevicefamily="ki...]
@@ -274,8 +306,6 @@ Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=24,length=0)\]
 Compiling architecture rtl of entity floating_point_v7_1_13.dsp48e1_wrapper [\dsp48e1_wrapper(c_part="xc7k325...]
-Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
-Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(length=2)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=13)\]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
@@ -323,11 +353,12 @@ Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\x
 Compiling architecture rtl of entity floating_point_v7_1_13.delay [\delay(width=23)\]
 Compiling architecture rtl of entity floating_point_v7_1_13.flt_add_dsp [\flt_add_dsp(c_xdevicefamily="ki...]
 Compiling architecture rtl of entity floating_point_v7_1_13.flt_add [\flt_add(c_xdevicefamily="kintex...]
+Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_latency=...]
 Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13_viv [\floating_point_v7_1_13_viv(c_xd...]
 Compiling architecture xilinx of entity floating_point_v7_1_13.floating_point_v7_1_13 [\floating_point_v7_1_13(c_xdevic...]
 Compiling module xil_defaultlib.floating_point_2
 Compiling module xil_defaultlib.dot_product_engine_default
 Compiling module xil_defaultlib.top_dot_product_engine_default
-Compiling module xil_defaultlib.tb_top_dot_product_engine_multi
+Compiling module xil_defaultlib.tb_top_dot_product_engine
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_dot_product_engine_multi_behav
+Built simulation snapshot tb_top_dot_product_engine_behav
