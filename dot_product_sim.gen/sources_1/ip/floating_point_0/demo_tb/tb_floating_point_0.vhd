@@ -85,7 +85,7 @@ architecture tb of tb_floating_point_0 is
   constant CLOCK_PERIOD : time := 100 ns;
   constant T_HOLD       : time := 10 ns;
   constant T_STROBE     : time := CLOCK_PERIOD - (1 ns);
-  constant DUT_DELAY    : time := CLOCK_PERIOD * 1;
+  constant DUT_DELAY    : time := CLOCK_PERIOD * 7;
 
   -----------------------------------------------------------------------
   -- Testbench types and signals
@@ -323,7 +323,7 @@ architecture tb of tb_floating_point_0 is
   -- A operand slave channel signals
   signal s_axis_a_tvalid         : std_logic := '0';  -- payload is valid
   signal s_axis_a_tready         : std_logic := '1';  -- slave is ready
-  signal s_axis_a_tdata          : std_logic_vector(7 downto 0) := (others => '0');  -- data payload
+  signal s_axis_a_tdata          : std_logic_vector(31 downto 0) := (others => '0');  -- data payload
 
   -- Result master channel signals
   signal m_axis_result_tvalid    : std_logic := '0';
@@ -339,7 +339,7 @@ architecture tb of tb_floating_point_0 is
 
   -- A operand slave channel alias signals
   signal s_axis_a_tdata_real    : real := 0.0;  -- fixed-point value using VHDL 'real' data type
-  signal s_axis_a_tdata_int     : std_logic_vector(7 downto 0) := (others => '0');  -- integer part (including sign bit)
+  signal s_axis_a_tdata_int     : std_logic_vector(31 downto 0) := (others => '0');  -- integer part (including sign bit)
 
 
 
@@ -442,7 +442,7 @@ begin
   stimuli_a : process
 
     -- Procedure to drive a single transaction on the A channel
-    procedure drive_a_single(tdata : std_logic_vector(7 downto 0);
+    procedure drive_a_single(tdata : std_logic_vector(31 downto 0);
                              variable abort : out boolean) is
     begin
       -- Drive AXI signals
@@ -469,14 +469,14 @@ begin
                       count   : positive := 1;
                       step    : real     := 0.0) is
       variable value     : real := data;
-      variable value_slv : std_logic_vector(7 downto 0);
-      variable tdata     : std_logic_vector(7 downto 0);
+      variable value_slv : std_logic_vector(31 downto 0);
+      variable tdata     : std_logic_vector(31 downto 0);
       variable ip_count  : natural := 0;
       variable abort     : boolean;
     begin
       count_loop : loop
         -- Convert data from real to std_logic_vector
-        value_slv := real_to_fix(value, 8, 0);
+        value_slv := real_to_fix(value, 32, 0);
         -- Set up AXI signals
         tdata := value_slv;
         -- Drive AXI transaction
@@ -495,7 +495,7 @@ begin
 
 
 
-    variable tdata : std_logic_vector(7 downto 0) := (others => '0');
+    variable tdata : std_logic_vector(31 downto 0) := (others => '0');
     variable abort : boolean;
 
   begin
@@ -616,8 +616,8 @@ begin
   -----------------------------------------------------------------------
 
   -- A operand slave channel alias signals
-  s_axis_a_tdata_real    <= fix_to_real(s_axis_a_tdata(7 downto 0), 8, 0);
-  s_axis_a_tdata_int     <= s_axis_a_tdata(7 downto 0);
+  s_axis_a_tdata_real    <= fix_to_real(s_axis_a_tdata(31 downto 0), 32, 0);
+  s_axis_a_tdata_int     <= s_axis_a_tdata(31 downto 0);
 
   -- Result master channel alias signals
   m_axis_result_tdata_real     <= flt_to_real(m_axis_result_tdata(31 downto 0), 32, 24) when m_axis_result_tvalid = '1';
