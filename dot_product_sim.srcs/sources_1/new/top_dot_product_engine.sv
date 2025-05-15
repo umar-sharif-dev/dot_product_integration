@@ -15,6 +15,8 @@ module top_dot_product_engine (
     output logic         done
 );
 
+    logic [511:0] sipo_out;
+
     // 1. BRAMs for x_vector
     logic [31:0] x_vector [0:63];
 
@@ -45,8 +47,10 @@ module top_dot_product_engine (
         .rst (rst),
         .en  (en),
         .din (weight_byte),
-        .dout(A_row_packed)
+        .dout(sipo_out)
     );
+    
+    assign A_row_packed = (start) ? sipo_out : 0; 
 
     // 3. Dot Product Engine
     dot_product_engine #(

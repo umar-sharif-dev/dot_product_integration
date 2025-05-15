@@ -65,7 +65,7 @@ module tb_top_dot_product_engine_multi;
         weight_byte = j; // unique row per dot product
         @(posedge clk);
         
-        if (j >= 63) begin
+        if (j >= 62) begin
             start = 1;
         end
     end  
