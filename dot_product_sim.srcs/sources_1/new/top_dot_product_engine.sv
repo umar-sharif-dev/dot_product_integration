@@ -53,6 +53,8 @@ module top_dot_product_engine (
 
     // 3. Dynamic SIPO to pack weights
     logic [MAX_N*2-1:0] A_row_packed;
+    logic [MAX_N*2-1:0] sipo_out;
+    
     dynamic_sipo #(MAX_N*2) dyn_sipo_inst (
         .clk   (clk),
         .rst   (rst),
@@ -62,6 +64,8 @@ module top_dot_product_engine (
         .dout  (A_row_packed)
     );
 
+    assign A_row_packed = start ? sipo_out : 0;
+    
     // 4. Dot Product Engine
     dot_product_engine #(
         .MAX_N(MAX_N),

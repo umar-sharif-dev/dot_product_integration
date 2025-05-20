@@ -11,27 +11,96 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="276.250 ns"></ZoomStartTime>
-      <ZoomEndTime time="733.751 ns"></ZoomEndTime>
-      <Cursor1Time time="657.500 ns"></Cursor1Time>
+      <ZoomStartTime time="307.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="386.501 ns"></ZoomEndTime>
+      <Cursor1Time time="345.500 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="199"></NameColumnWidth>
-      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+      <NameColumnWidth column_width="193"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="25" />
+   <WVObjectSize size="44" />
    <wave_markers>
       <marker label="" time="912500" />
-      <marker label="" time="662500" />
+      <marker label="" time="357500" />
    </wave_markers>
    <wvobject type="group" fp_name="group2474">
       <obj_property name="label">top_tb</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/en">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/start">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/data_type">
+      <obj_property name="ElementShortName">data_type[2:0]</obj_property>
+      <obj_property name="ObjectShortName">data_type[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/weight_element">
+      <obj_property name="ElementShortName">weight_element[15:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_element[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group247">
+      <obj_property name="label">dynamic sipo</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dyn_sipo_inst/din">
+      <obj_property name="ElementShortName">din[15:0]</obj_property>
+      <obj_property name="ObjectShortName">din[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dyn_sipo_inst/shift">
+      <obj_property name="ElementShortName">shift[7:0]</obj_property>
+      <obj_property name="ObjectShortName">shift[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dyn_sipo_inst/counter">
+      <obj_property name="ElementShortName">counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dyn_sipo_inst/shift_reg">
+      <obj_property name="ElementShortName">shift_reg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">shift_reg[255:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dyn_sipo_inst/dout">
+      <obj_property name="ElementShortName">dout[255:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
    <wvobject fp_name="divider1715" type="divider">
       <obj_property name="label">product</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/A_raw">
+      <obj_property name="ElementShortName">A_raw[0:127][15:0]</obj_property>
+      <obj_property name="ObjectShortName">A_raw[0:127][15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/A_fp32">
+      <obj_property name="ElementShortName">A_fp32[0:127][31:0]</obj_property>
+      <obj_property name="ObjectShortName">A_fp32[0:127][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/A_valid">
+      <obj_property name="ElementShortName">A_valid[0:127]</obj_property>
+      <obj_property name="ObjectShortName">A_valid[0:127]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/prod_fp32">
+      <obj_property name="ElementShortName">prod_fp32[0:127][31:0]</obj_property>
+      <obj_property name="ObjectShortName">prod_fp32[0:127][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/prod_valid">
+      <obj_property name="ElementShortName">prod_valid[0:127]</obj_property>
+      <obj_property name="ObjectShortName">prod_valid[0:127]</obj_property>
    </wvobject>
    <wvobject fp_name="divider1715" type="divider">
       <obj_property name="label"># Add Adder Tree Levels</obj_property>
@@ -41,88 +110,105 @@
       <obj_property name="label"># Level 1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/valid_stage0">
+      <obj_property name="ElementShortName">valid_stage0[0:127]</obj_property>
+      <obj_property name="ObjectShortName">valid_stage0[0:127]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/sum_stage0">
+      <obj_property name="ElementShortName">sum_stage0[0:127][31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_stage0[0:127][31:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="divider1715" type="divider">
       <obj_property name="label"># Level 2</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/valid_stage1">
+      <obj_property name="ElementShortName">valid_stage1[0:63]</obj_property>
+      <obj_property name="ObjectShortName">valid_stage1[0:63]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/sum_stage1">
+      <obj_property name="ElementShortName">sum_stage1[0:63][31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_stage1[0:63][31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="divider1715" type="divider">
       <obj_property name="label"># Level 3</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/valid_stage2">
+      <obj_property name="ElementShortName">valid_stage2[0:31]</obj_property>
+      <obj_property name="ObjectShortName">valid_stage2[0:31]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/sum_stage2">
+      <obj_property name="ElementShortName">sum_stage2[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_stage2[0:31][31:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="divider1715" type="divider">
       <obj_property name="label"># Level 4</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/valid_stage3">
+      <obj_property name="ElementShortName">valid_stage3[0:15]</obj_property>
+      <obj_property name="ObjectShortName">valid_stage3[0:15]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/sum_stage3">
+      <obj_property name="ElementShortName">sum_stage3[0:15][31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_stage3[0:15][31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="divider1715" type="divider">
       <obj_property name="label"># Level 5</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/valid_stage4">
+      <obj_property name="ElementShortName">valid_stage4[0:7]</obj_property>
+      <obj_property name="ObjectShortName">valid_stage4[0:7]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/sum_stage4">
+      <obj_property name="ElementShortName">sum_stage4[0:7][31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_stage4[0:7][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider1715" type="divider">
+      <obj_property name="label"># Level 6</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/valid_stage5">
+      <obj_property name="ElementShortName">valid_stage5[0:3]</obj_property>
+      <obj_property name="ObjectShortName">valid_stage5[0:3]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/sum_stage5">
+      <obj_property name="ElementShortName">sum_stage5[0:3][31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_stage5[0:3][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="divider1715" type="divider">
+      <obj_property name="label"># Level 7</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/valid_stage6">
+      <obj_property name="ElementShortName">valid_stage6[0:1]</obj_property>
+      <obj_property name="ObjectShortName">valid_stage6[0:1]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/sum_stage6">
+      <obj_property name="ElementShortName">sum_stage6[0:1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_stage6[0:1][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
    <wvobject fp_name="divider1715" type="divider">
       <obj_property name="label">Final Output</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/dut/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/dut/rst">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/dut/rstn">
-      <obj_property name="ElementShortName">rstn</obj_property>
-      <obj_property name="ObjectShortName">rstn</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/dut/en">
-      <obj_property name="ElementShortName">en</obj_property>
-      <obj_property name="ObjectShortName">en</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/dut/start">
+   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/start">
       <obj_property name="ElementShortName">start</obj_property>
       <obj_property name="ObjectShortName">start</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/weight_element">
-      <obj_property name="ElementShortName">weight_element[15:0]</obj_property>
-      <obj_property name="ObjectShortName">weight_element[15:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/data_type">
-      <obj_property name="ElementShortName">data_type[2:0]</obj_property>
-      <obj_property name="ObjectShortName">data_type[2:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/x_wr_addr">
-      <obj_property name="ElementShortName">x_wr_addr[3:0]</obj_property>
-      <obj_property name="ObjectShortName">x_wr_addr[3:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/x_wr_data">
-      <obj_property name="ElementShortName">x_wr_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">x_wr_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/x_wr_en">
-      <obj_property name="ElementShortName">x_wr_en[63:0]</obj_property>
-      <obj_property name="ObjectShortName">x_wr_en[63:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/y_out">
-      <obj_property name="ElementShortName">y_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">y_out[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/dut/done">
+   <wvobject type="logic" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/done">
       <obj_property name="ElementShortName">done</obj_property>
       <obj_property name="ObjectShortName">done</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/x_vector">
-      <obj_property name="ElementShortName">x_vector[0:127][31:0]</obj_property>
-      <obj_property name="ObjectShortName">x_vector[0:127][31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/shift_width">
-      <obj_property name="ElementShortName">shift_width[7:0]</obj_property>
-      <obj_property name="ObjectShortName">shift_width[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/A_row_packed">
-      <obj_property name="ElementShortName">A_row_packed[255:0]</obj_property>
-      <obj_property name="ObjectShortName">A_row_packed[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/MAX_N">
-      <obj_property name="ElementShortName">MAX_N[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MAX_N[31:0]</obj_property>
+   <wvobject type="array" fp_name="/tb_top_dot_product_engine/dut/dpe_inst/y_out">
+      <obj_property name="ElementShortName">y_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y_out[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>

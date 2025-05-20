@@ -96,8 +96,8 @@ input wire m_axis_result_tready;
 output wire [31 : 0] m_axis_result_tdata;
 
   floating_point_v7_1_13 #(
-    .C_XDEVICEFAMILY("kintex7"),
-    .C_PART("xc7k325tffg900-2"),
+    .C_XDEVICEFAMILY("kintexuplus"),
+    .C_PART("xcku5p-ffvb676-2-i"),
     .C_HAS_ADD(0),
     .C_HAS_SUBTRACT(0),
     .C_HAS_MULTIPLY(1),
@@ -131,7 +131,7 @@ output wire [31 : 0] m_axis_result_tdata;
     .C_RESULT_WIDTH(32),
     .C_RESULT_FRACTION_WIDTH(24),
     .C_COMPARE_OPERATION(8),
-    .C_LATENCY(9),
+    .C_LATENCY(3),
     .C_OPTIMIZATION(1),
     .C_MULT_USAGE(2),
     .C_BRAM_USAGE(0),

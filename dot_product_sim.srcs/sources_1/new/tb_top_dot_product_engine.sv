@@ -35,7 +35,7 @@ module tb_top_dot_product_engine;
     .done          (done)
   );
 
-  int i;
+  int i,j;
   logic [31:0] results [0:0];
 
   // Function to interpret 32-bit logic as real
@@ -62,6 +62,7 @@ module tb_top_dot_product_engine;
   initial begin
     start = 0;
     weight_element = 0;
+//    data_type = 3'd1; // INT4
     data_type = 3'd2; // INT8
     x_wr_en = 0;
     x_wr_data = 0;
@@ -74,17 +75,26 @@ module tb_top_dot_product_engine;
     preload_bram();
 
     // Feed 32 INT8 values
-    for (i = 0; i < 32; i++) begin
-      @(posedge clk);
-      weight_element = i[7:0]; // 8-bit INT values
-    end
+//    for (i = 0; i < 32; i++) begin
+//      @(posedge clk);
+//      weight_element = i[7:0]; // 8-bit INT values
+//    end
 
-    @(posedge clk);
-    start = 1;
-    @(posedge clk);
-    start = 0;
-
-    wait(done);
+//    @(posedge clk);
+//    start = 1;
+//    repeat (5) @(posedge clk); // Give time for conversion and propagation
+//    start = 0;
+    
+    for (j = 0; j < 128; j++) begin
+//        weight_element = j; // unique row per dot product
+        weight_element = j[7:0]; // unique row per dot product
+        @(posedge clk);
+        
+        if (j >= 30) begin
+            start = 1;
+        end
+    end  
+ 
     results[0] = y_out;
     $display("Dot product result = %h (%f)", y_out, fp32_to_real(y_out));
 

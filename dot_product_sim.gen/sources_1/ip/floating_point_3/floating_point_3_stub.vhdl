@@ -1,13 +1,13 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Mon May 12 01:45:16 2025
+-- Date        : Thu May 15 03:24:51 2025
 -- Host        : hp running 64-bit Ubuntu 20.04.6 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.gen/sources_1/ip/floating_point_3/floating_point_3_stub.vhdl
 -- Design      : floating_point_3
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xc7k325tffg900-2
+-- Device      : xcku5p-ffvb676-2-i
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

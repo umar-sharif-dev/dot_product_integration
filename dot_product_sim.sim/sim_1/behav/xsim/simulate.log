@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Dot product result = 451f0000 (2544.000000)
+$finish called at time : 842500 ps : File "/home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.srcs/sources_1/new/tb_top_dot_product_engine.sv" Line 102
+INFO: xsimkernel Simulation Memory Usage: 478520 KB (Peak: 537084 KB), Simulation CPU Usage: 4630 ms
