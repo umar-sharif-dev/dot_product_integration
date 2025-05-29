@@ -1,10 +1,11 @@
-// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Thu May 15 03:24:51 2025
-// Host        : hp running 64-bit Ubuntu 20.04.6 LTS
+// Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+// Date        : Wed May 28 22:53:22 2025
+// Host        : NB10535 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               /home/hp/Desktop/hassan_ai/dpe_git/dot_product_integration/dot_product_sim.gen/sources_1/ip/floating_point_3/floating_point_3_stub.v
+//               c:/Users/MalikUmarSharif/Downloads/dot_product_sim_may28.xpr/dot_product_sim/dot_product_sim.gen/sources_1/ip/floating_point_3/floating_point_3_stub.v
 // Design      : floating_point_3
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xcku5p-ffvb676-2-i
@@ -13,12 +14,13 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* X_CORE_INFO = "floating_point_v7_1_13,Vivado 2021.2" *)
+(* X_CORE_INFO = "floating_point_v7_1_18,Vivado 2024.1" *)
 module floating_point_3(aclk, aresetn, s_axis_a_tvalid, 
   s_axis_a_tready, s_axis_a_tdata, m_axis_result_tvalid, m_axis_result_tready, 
   m_axis_result_tdata)
-/* synthesis syn_black_box black_box_pad_pin="aclk,aresetn,s_axis_a_tvalid,s_axis_a_tready,s_axis_a_tdata[15:0],m_axis_result_tvalid,m_axis_result_tready,m_axis_result_tdata[31:0]" */;
-  input aclk;
+/* synthesis syn_black_box black_box_pad_pin="aresetn,s_axis_a_tvalid,s_axis_a_tready,s_axis_a_tdata[15:0],m_axis_result_tvalid,m_axis_result_tready,m_axis_result_tdata[31:0]" */
+/* synthesis syn_force_seq_prim="aclk" */;
+  input aclk /* synthesis syn_isclock = 1 */;
   input aresetn;
   input s_axis_a_tvalid;
   output s_axis_a_tready;

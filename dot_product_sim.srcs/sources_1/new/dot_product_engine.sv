@@ -8,24 +8,26 @@ module dot_product_engine #(
     input  logic                  rstn,
     input  logic                  start,
     input  logic [2:0]            data_type,
-    input  logic [7:0]            shift_width,
-    input  logic [255:0]          A_row_packed, // fixed DDR width
+    input  logic [255:0]          A_data, // fixed DDR width
     input  logic [DATA_WIDTH-1:0] x_vector [0:MAX_N-1],
     output logic [DATA_WIDTH-1:0] y_out,
     output logic                  done
 );
 
     logic [15:0] A_raw [0:MAX_N-1];
-
+    logic [255:0] A_data_reg; 
+    
+    assign A_data_reg = start ? A_data : 0;
+   
     always_comb begin
         for (int i = 0; i < MAX_N; i++) begin
             case (data_type)
-                3'd0: A_raw[i] = (i < 128) ? {{14{A_row_packed[i*2+1]}},  A_row_packed[i*2 +: 2]}  : 16'd0;
-                3'd1: A_raw[i] = (i < 64)  ? {{12{A_row_packed[i*4+3]}},  A_row_packed[i*4 +: 4]}  : 16'd0;
-                3'd2: A_raw[i] = (i < 32)  ? {{8{A_row_packed[i*8+7]}},   A_row_packed[i*8 +: 8]}  : 16'd0;
-                3'd3: A_raw[i] = (i < 32)  ? {8'd0, A_row_packed[i*8 +: 8]}                         : 16'd0;
-                3'd4: A_raw[i] = (i < 16)  ? A_row_packed[i*16 +: 16]                              : 16'd0;
-                3'd5: A_raw[i] = (i < 16)  ? A_row_packed[i*16 +: 16]                              : 16'd0;
+                3'd0: A_raw[i] = (i < 128) ? {{14{A_data_reg[i*2+1]}},  A_data_reg[i*2 +: 2]}  : 16'd0;
+                3'd1: A_raw[i] = (i < 64)  ? {{12{A_data_reg[i*4+3]}},  A_data_reg[i*4 +: 4]}  : 16'd0;
+                3'd2: A_raw[i] = (i < 32)  ? {{8{A_data_reg[i*8+7]}},   A_data_reg[i*8 +: 8]}  : 16'd0;
+                3'd3: A_raw[i] = (i < 32)  ? {8'd0, A_data_reg[i*8 +: 8]}                         : 16'd0;
+                3'd4: A_raw[i] = (i < 16)  ? A_data_reg[i*16 +: 16]                              : 16'd0;
+                3'd5: A_raw[i] = (i < 16)  ? A_data_reg[i*16 +: 16]                              : 16'd0;
                 default: A_raw[i] = 16'd0;
             endcase
         end
